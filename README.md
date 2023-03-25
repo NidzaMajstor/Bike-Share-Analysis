@@ -61,5 +61,10 @@ These visualizations are saved in the "Visualizations" folder as png files.
 * On average, each ride is about 27 minutes.
 * Casual users ride for 2.7x to 3x longer than members on any day of the week.
 
-#Conclusion
-The analysis of the bike share data for 2020 provides valuable insights into the usage patterns of bike share users. The results show that the majority of rides were taken by members, and that the average ride length for members was longer than for casual riders. The analysis also shows that ride length varies by day of the week, with longer rides taken on weekends. These insights can be used to improve the bike share program and make it more accessible and convenient for users.
+# Recommendations
+
+After analyzing the data, some recommendations to increase ridership and revenue for the bike-share program are:
+
+* Offer a weekend-only membership at a different price point than the full annual membership to entice casual users towards a full annual membership. They can only unlock bikes on Friday, Saturday, or Sunday.
+* Create a "See our City" campaign targeted to casual users that includes 52 suggested routes that will cover all of the major sights in Chicago---one for each weekend. Casual riders could rent as they go, but they could see their city in one year (and save money!) for the price of an annual membership.
+* Be sure that any campaigns are out to the market in the summer when ridership is at its annual peak.
