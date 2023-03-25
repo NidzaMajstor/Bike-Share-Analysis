@@ -45,7 +45,8 @@ The R script used to clean and analyze the data is included in this repository. 
 * Calculates the average ride length for each combination of member type and day of the week
 
 # Visualizations
-The script also includes several visualizations created using ggplot2. These visualizations help to illustrate some of the insights gained from the analysis.
+The script also includes several visualizations created using ggplot2. These visualizations help to illustrate some of the insights gained from the analysis. 
+These visualizations are saved in the "visualizations" folder as png files.
 
 # Findings
 ## Ridership Comparison
