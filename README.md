@@ -46,7 +46,7 @@ The R script used to clean and analyze the data is included in this repository. 
 
 # Visualizations
 The script also includes several visualizations created using ggplot2. These visualizations help to illustrate some of the insights gained from the analysis. 
-These visualizations are saved in the "visualizations" folder as png files.
+These visualizations are saved in the "Visualizations" folder as png files.
 
 # Findings
 ## Ridership Comparison
