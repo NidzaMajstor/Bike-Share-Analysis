@@ -60,7 +60,7 @@ all_trips <- bind_rows(jan_feb_mar, apr, may, jun, jul, aug, sep, oct, nov, dec)
 
 #-Remove unnecessary columns- 
 all_trips <- all_trips %>% 
-  select(-c(start_lat, end_lat, start_lng, end_lng, ride_length))
+  select(-c(start_lat, end_lat, start_lng, end_lng))
 
 #--Perform initial exploratory data analysis--
 colnames(all_trips)
