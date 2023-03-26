@@ -24,7 +24,7 @@ The goal of this case study is to provide clear insights for designing marketing
 This project involves analyzing bike share data for the year 2020. The data was gathered from 10 different CSV files, each representing a different month of the year. The goal of this analysis is to gain insights into the usage patterns of bike share users, including the average ride length, the number of rides taken by members vs. casual riders, and the average ride length by day of the week.
 
 ## Getting Started
-To run this analysis, you will need to download all 9 CSV files containing the bike share data for each month of 2020, as well as one containing the first three months. The CSV files should be stored in the same directory as the R script. Additionally, you will need to install the necessary packages (tidyverse, dplyr, lubridate, and ggplot2) if you haven't already.
+To run this analysis, you will need to download all 9 CSV files containing the bike share data for each month of 2020, as well as one containing the first three months. You can download the files from the Divvy trip data website at https://divvy-tripdata.s3.amazonaws.com/index.html. The CSV files should be stored in the same directory as the R script. Additionally, you will need to install the necessary packages (tidyverse, dplyr, lubridate, and ggplot2) if you haven't already.
 
 ## Data Cleaning and Analysis
 The R script used to clean and analyze the data is included in this repository. The script performs the following tasks:
