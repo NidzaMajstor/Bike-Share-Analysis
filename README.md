@@ -67,5 +67,5 @@ These visualizations are saved in the "Visualizations" folder as png files.
 After analyzing the data, some recommendations to increase ridership and revenue for the bike-share program are:
 
 * Offer a weekend-only membership at a different price point than the full annual membership to entice casual users towards a full annual membership. They can only unlock bikes on Friday, Saturday, or Sunday.
-* Create a "See our City" campaign targeted to casual users that includes 52 suggested routes that will cover all of the major sights in Chicago---one for each weekend. Casual riders could rent as they go, but they could see their city in one year (and save money!) for the price of an annual membership.
-* Be sure that any campaigns are out to the market in the summer when ridership is at its annual peak.
+* Implementing targeted social media ads aimed at individuals who have previously used bike-sharing services and have expressed an interest in travel, outdoor sports, parks, museums, and Chicago's tourist landmarks.
+* Offering progressive discounts based on ride length could incentivize members to use the bikes for longer periods, leading to increased revenue for the company. The longer the ride, the greater the discount on rates, providing members with an affordable and flexible means of transportation.
