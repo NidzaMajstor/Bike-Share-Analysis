@@ -133,14 +133,22 @@ all_trips_v2 %>%
 
 
 #--Creates a bar chart that displays the total number of rides taken by members and casual riders--
-all_trips_v2 %>% 
-  group_by(member_casual) %>% 
-  summarise(ride_count = length(ride_id)) %>% 
-  arrange(member_casual) %>% 
-  ggplot(aes(x = member_casual,y = ride_count,fill = member_casual)) +
-  geom_col(position = "dodge")+
-  labs(title = "Total rides taken (ride_count) of Members and Casual riders")+
-  scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
+all_trips_v2 %>%
+  group_by(member_casual) %>%
+  summarise(ride_count = length(ride_id)) %>%
+  ggplot(aes(x = member_casual, y = ride_count, fill = member_casual)) +
+  geom_col(position = "dodge", color = "black", width = 0.7) +
+  geom_text(aes(label = ride_count), position = position_dodge(width = 0.7),
+            vjust = -0.5) +
+  scale_fill_manual(values = c("#E69F00", "#56B4E9")) +
+  labs(title = "Total rides taken by Members and Casual riders",
+       x = "",
+       y = "Number of rides",
+       fill = "User type") +
+  theme_minimal() +
+  theme(legend.position = "top",
+        panel.grid.major.y = element_line(color = "gray", linetype = "dashed"),
+        panel.grid.minor.y = element_blank()) 
 
 #--Generates a bar chart visualization of the number of rides for member and casual riders grouped by the day of the week--
 all_trips_v2 %>% 
@@ -150,16 +158,32 @@ all_trips_v2 %>%
   arrange(member_casual, day_of_week)  %>% 
   ggplot(aes(x = day_of_week, y = number_of_rides, fill = member_casual)) +
   geom_col(position = "dodge") + 
-  labs(title = "Table 1: Number of Rides by Day and Rider Type")
+  scale_fill_manual(values = c("#E69F00", "#56B4E9")) +
+  labs(title = "Table 1: Number of Rides by Day and Rider Type") + 
+  ylab("Number of Rides (1e+05 = 100,000)") + 
+  xlab("Day of Week") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
 
 #--visualizes the average duration of rides by day of the week and rider type (member or casual)--
-all_trips_v2 %>% 
-  group_by(member_casual, day_of_week) %>%  
-  summarise(average_duration = mean(ride_length)) %>% 
-  arrange(member_casual, day_of_week) %>% 
-  ggplot(aes( x = day_of_week, y = average_duration, fill = member_casual)) +
-  geom_col(position = "dodge") + 
-  labs(title = "Average duration of ride by day of the week", subtitle = "ride_length and weekday")
+all_trips_v2 %>%
+  group_by(member_casual, day_of_week) %>%
+  summarise(average_duration = mean(ride_length),
+            sd_duration = sd(ride_length)/sqrt(n())) %>%
+  ggplot(aes(x = day_of_week, y = average_duration, fill = member_casual)) +
+  geom_col(position = "dodge", color = "black", width = 0.7) +
+  geom_errorbar(aes(ymin = average_duration - sd_duration, ymax = average_duration + sd_duration),
+                position = position_dodge(width = 0.7), width = 0.2) +
+  scale_fill_manual(values = c("#E69F00", "#56B4E9")) +
+  labs(title = "Average duration of ride by day of the week",
+       subtitle = "ride_length and weekday",
+       x = "Day of the week",
+       y = "Average ride duration (seconds)",
+       fill = "User type") +
+  theme_minimal() +
+  theme(legend.position = "top",
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank())
 
 
 
